@@ -1,0 +1,11 @@
+calc_posfix:
+  스택 s를 생성하고 초기화한다.
+  for item in 후위표기식 do
+    if (item이 피연산자이면)
+      push(s, item)
+    else if (item이 연산자 op이면)
+      second <- pop(s)
+      first <- pop(s)
+      result <- first op second   // op는 +-*/중의 하나
+      push(s, result)
+  final_result <- pop(s);
